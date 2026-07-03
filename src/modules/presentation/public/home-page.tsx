@@ -1,5 +1,6 @@
 import { lusitana } from "@/app/layout";
 import AcmeLogo from "@/components/shared/acme-logo";
+import { routes } from "@/config/routes";
 import { cn } from "@/lib/utils";
 import LoginButton from "@/modules/components/auth/login-button";
 import Image from "next/image";
@@ -18,12 +19,12 @@ const HomePage = () => {
             <strong>Welcome to NextDocs26.</strong>
           </p>
           <p className={cn(lusitana.className, "text-muted-foreground")}>
-            This is a example for the{" "}
+            For managing the application go to the{" "}
             <Link
-              href="https://nextjs.org/learn/"
+              href={routes.dashboard}
               className="font-bold text-blue-500 transition-all hover:text-blue-600"
             >
-              Next.js Learn Course
+              Dashboard
             </Link>
             , brought to you by Vercel.
           </p>
@@ -40,6 +41,7 @@ const HomePage = () => {
             height={760}
             alt="Screenshots of the dashboard project showing desktop version"
             className="hidden md:block"
+            loading="eager"
           />
           <Image
             src="/hero-mobile.png"
