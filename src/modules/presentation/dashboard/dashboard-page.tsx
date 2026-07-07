@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import LatestInvoices from "@/modules/components/dashboard/latest-invoices";
+import LatestInvoices from "@/modules/components/invoices/latest-invoices";
 import RevenueChart from "@/modules/components/dashboard/revenue-chart";
 
 import {

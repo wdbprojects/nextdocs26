@@ -19,6 +19,7 @@ export type Customer = {
 export type Invoice = {
   id: string;
   customer_id: string;
+  name: string;
   amount: number;
   date: string;
   // In TypeScript, this is called a string union type.

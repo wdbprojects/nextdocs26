@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/table";
 import { Invoice } from "@/lib/definitions";
 import { cn } from "@/lib/utils";
+import UpdateInvoice from "@/modules/components/invoices/update-invoice";
+import DeleteInvoice from "@/modules/components/invoices/delete-invoice";
 
 const TableInvoices = ({ invoices }: { invoices: Invoice[] }) => {
   const statusColor = {
@@ -27,8 +29,10 @@ const TableInvoices = ({ invoices }: { invoices: Invoice[] }) => {
       <TableHeader>
         <TableRow>
           <TableHead className="w-70">Id</TableHead>
+          <TableHead>Name</TableHead>
           <TableHead>Amount</TableHead>
           <TableHead>Status</TableHead>
+          <TableHead className="text-center">Actions</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -36,6 +40,7 @@ const TableInvoices = ({ invoices }: { invoices: Invoice[] }) => {
           return (
             <TableRow key={invoice.id}>
               <TableCell>{invoice.id}</TableCell>
+              <TableCell>{invoice.name}</TableCell>
               <TableCell>{invoice.amount}</TableCell>
               <TableCell>
                 <Badge
@@ -49,6 +54,10 @@ const TableInvoices = ({ invoices }: { invoices: Invoice[] }) => {
                 >
                   {invoice.status}
                 </Badge>
+              </TableCell>
+              <TableCell className="flex items-center justify-center gap-2">
+                <UpdateInvoice id={invoice.id} />
+                <DeleteInvoice id={invoice.id} />
               </TableCell>
             </TableRow>
           );

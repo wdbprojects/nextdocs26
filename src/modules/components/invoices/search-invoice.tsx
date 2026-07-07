@@ -33,7 +33,7 @@ const SearchInvoice = ({ placeholder }: { placeholder: string }) => {
   }, 300);
 
   return (
-    <div className="relative flex flex-1 shrink-0">
+    <div className="relative flex max-w-120 flex-1 shrink-0">
       <Input
         placeholder={placeholder}
         className="pl-8.5 placeholder:text-gray-500"

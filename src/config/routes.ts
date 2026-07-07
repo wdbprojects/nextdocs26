@@ -4,6 +4,7 @@ export const routes = {
   /* DASHBOARD */
   dashboard: "/dashboard",
   invoices: "/dashboard/invoices",
+  createInvoice: "/dashboard/invoices/create",
   customers: "/dashboard/customers",
   /* AUTH */
   login: "/auth/login",
